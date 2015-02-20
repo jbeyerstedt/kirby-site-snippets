@@ -12,9 +12,10 @@
 // in the config.php:
 // c::set('navbar-class', 'navbar-default');
 
-// version: 1.1.0 (20.02.2015)
+// version: 1.2.0 (20.02.2015)
 // changelog: 
 // v1.1.0: add config option for the navbar style class
+// v1.2.0: move .container in nav.navbar for affix scripts
 // -------------------------------------------
 
 // add default navbar-class if not set in config.php
@@ -22,9 +23,9 @@ $class = c::get('navbar-class');
 if(!isset($class)) $class = 'navbar-inverse';
 ?>
 
-<div class="navbar-wrapper" >
-<div class="container">
+<div class="navbar-wrapper">
 <nav class="navbar <?php echo $class ?>" role="navigation">
+<div class="container">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -56,6 +57,6 @@ if(!isset($class)) $class = 'navbar-inverse';
     </ul>
   </div><!-- /.navbar-collapse -->
   
-</nav>
 </div>
+</nav>
 </div>
