@@ -7,16 +7,24 @@
 // copyright: Jannik Beyerstedt | http://jannikbeyerstedt.de | jtByt.Pictures@gmail.com
 // license: http://www.gnu.org/licenses/gpl-3.0.txt GPLv3 License
 
-// version: 1.0 (16.11.2014)
+// usage:
+// snippet('plg-navbar-level3'); 
+// in the config.php:
+// c::set('navbar-class', 'navbar-default');
+
+// version: 1.1.0 (20.02.2015)
 // changelog: 
+// v1.1.0: add config option for the navbar style class
 // -------------------------------------------
+
+// add default navbar-class if not set in config.php
+$class = c::get('navbar-class');
+if(!isset($class)) $class = 'navbar-inverse';
 ?>
 
 <div class="navbar-wrapper" >
 <div class="container">
-<nav class="navbar navbar-inverse" role="navigation">
-  
-  <!-- Brand and toggle get grouped for better mobile display -->
+<nav class="navbar <?php echo $class ?>" role="navigation">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
       <span class="sr-only">Toggle navigation</span>

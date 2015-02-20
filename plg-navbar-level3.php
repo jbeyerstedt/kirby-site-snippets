@@ -9,17 +9,24 @@
 
 // usage:
 // snippet('plg-navbar-level3'); 
+// in the config.php:
+// c::set('navbar-class', 'navbar-default navbar-fixed-top');
 
-// version: 1.0 (08.12.2014)
+// version: 1.1.0 (20.02.2015)
 // changelog: 
+// v1.1.0: add config option for the navbar style class
 // -------------------------------------------
+
+// add default navbar-class if not set in config.php
+$class = c::get('navbar-class');
+if(!isset($class)) $class = 'navbar-inverse navbar-fixed-top';
 
 // find the open/active page on the first level
 $root  = $pages->children()->findOpen();
 $items = ($root) ? $root->children()->visible() : false; 
 ?>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar <?php echo $class ?>" role="navigation">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
       <span class="sr-only">Toggle navigation</span>

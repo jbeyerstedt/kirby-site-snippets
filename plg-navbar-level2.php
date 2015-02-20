@@ -8,12 +8,18 @@
 // license: http://www.gnu.org/licenses/gpl-3.0.txt GPLv3 License
 
 // usage:
-// snippet('plg-navbar-level2');
+// snippet('plg-navbar-level3'); 
+// in the config.php:
+// c::set('navbar-class', 'navbar-default navbar-fixed-top');
 
-// version: 1.1.0 (22.12.2014)
+// version: 1.1.0 (20.02.2015)
 // changelog: 
-// v1.1.0: parameter for displaying invisible pages too + disable sub-homepage
+// v1.1.0: add config option for the navbar style class
 // -------------------------------------------
+
+// add default navbar-class if not set in config.php
+$class = c::get('navbar-class');
+if(!isset($class)) $class = 'navbar-inverse navbar-fixed-top';
 
 // find the open/active page on the first level
 $root  = $pages->findOpen();
@@ -24,7 +30,7 @@ if ($invisible==true) {
 }
 ?>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar <?php echo $class ?>" role="navigation">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
       <span class="sr-only">Toggle navigation</span>
