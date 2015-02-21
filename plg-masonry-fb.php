@@ -4,7 +4,7 @@
 // Title:  plg-masonry-fb (with FANCYBOX)
 // funct:  create a image masonry + fancybox (with js from: http://masonry.desandro.com)
 
-// copyright: Jannik Beyerstedt | http://jannikbeyerstedt.de | jtByt.Pictures@gmail.com
+// copyright: Jannik Beyerstedt | http://jannikbeyerstedt.de | code@jannikbeyerstedt.de
 // license: http://www.gnu.org/licenses/gpl-3.0.txt GPLv3 License
 
 // usage:
