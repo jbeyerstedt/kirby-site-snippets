@@ -8,7 +8,7 @@
 // license: http://www.gnu.org/licenses/gpl-3.0.txt GPLv3 License
 
 // usage:
-// snippet('plg-navbar-level3'); 
+// snippet('plg-navbar'); 
 // in the config.php:
 // c::set('navbar-class', 'navbar-default');
 

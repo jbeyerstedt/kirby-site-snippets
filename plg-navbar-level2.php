@@ -8,18 +8,23 @@
 // license: http://www.gnu.org/licenses/gpl-3.0.txt GPLv3 License
 
 // usage:
-// snippet('plg-navbar-level3'); 
+// snippet('plg-navbar-level2', array('invisible'=>false, 'sub_home'=>false)); 
 // in the config.php:
 // c::set('navbar-class', 'navbar-default navbar-fixed-top');
 
-// version: 1.1.0 (20.02.2015)
+// version: 1.1.1 (01.03.2015)
 // changelog: 
 // v1.1.0: add config option for the navbar style class
+// v1.1.1: bugfixes with default values
 // -------------------------------------------
 
 // add default navbar-class if not set in config.php
 $class = c::get('navbar-class');
 if(!isset($class)) $class = 'navbar-inverse navbar-fixed-top';
+
+// defaults
+$sub_home = false;
+$invisible = false;
 
 // find the open/active page on the first level
 $root  = $pages->findOpen();
