@@ -12,10 +12,11 @@
 // in the config.php:
 // c::set('navbar-class', 'navbar-default navbar-fixed-top');
 
-// version: 1.1.1 (01.03.2015)
+// version: 1.1.2 (06.03.2015)
 // changelog: 
 // v1.1.0: add config option for the navbar style class
 // v1.1.1: bugfixes with default values
+// v1.1.2: fix that default values have overwritten the set option
 // -------------------------------------------
 
 // add default navbar-class if not set in config.php
@@ -23,8 +24,8 @@ $class = c::get('navbar-class');
 if(!isset($class)) $class = 'navbar-inverse navbar-fixed-top';
 
 // defaults
-$sub_home = false;
-$invisible = false;
+if (!isset($sub_home))  { $sub_home = false;  }
+if (!isset($invisible)) { $invisible = false; }
 
 // find the open/active page on the first level
 $root  = $pages->findOpen();
