@@ -3,6 +3,7 @@
 ## how to use
 There are two version of the masonry snippet. One for fancybox and another for swipebox.
 
+
 ### prerequisites:
 - masonry: <http://masonry.desandro.com>
 - swipebox: <http://brutaldesign.github.io/swipebox/>
@@ -33,7 +34,6 @@ c::set('photo_lightbox', 'swipebox'); // preferred
 //c::set('photo_lightbox', 'fancybox'); // only preferred, if v3 is used
 ```
 Of course, only enable fancybox OR swipebox.
-
 
 #### in your html head
 ```php
@@ -84,5 +84,3 @@ Then the snippet displays all your images contained in the pages directory.
 
 ## contribution
 Feel free to fork this repository an make it better.
-
-
