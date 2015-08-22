@@ -1,5 +1,11 @@
 #kirby-site-snippets: plg-carousel
 
+## ATTENTION: incompatible update from v1.1.1 to v1.2.0
+I´ve added some options to this plugin, which lead to the first any probably only incompatible update. With this update I´ve unified the option names and adapted them to the "namespacing" which kirby uses.  
+There are these changes:  
+`enable_carousel` to `plg_carousel.enable`
+
+
 ## how to use
 
 
@@ -13,16 +19,19 @@ The snippet code itself must be placed in the `site/snippets` folder. Of course 
 
 #### in your config
 ```php
-// enable carousel
-//c::set('enable_carousel', true);
+//c::set('plg_carousel.enable', true);
+//c::set('plg_carousel.sort', 'title');
+//c::set('plg_carousel.dir', 'desc');
 ```
-Enable carousel. This is not relevant if your template containes all relevant scripts every time.
+`plg_carousel.enable`: enables the additional javascript, if you use my code examples. This is not relevant if your template containes all relevant scripts every time.  
+Additionally there are options for kirby´s `sortBy` method, which sorts the images.  
+`plg_carousel.sort`: sort images by this field  
+`plg_carousel.dir`: sort images in this direction  
 
-Additionally you need to include jquery.
 
 #### before you closing body tag
 ```php
-<?php if (c::get('enable_carousel')) : ?>
+<?php if (c::get('plg_carousel.enable')) : ?>
   <script type="text/javascript">
     $(document).ready(function () {
       $('.carousel').carousel('cycle');
@@ -30,6 +39,7 @@ Additionally you need to include jquery.
   </script>
 <?php endif; ?>
 ```
+Additionally you need to include jquery.
 
 
 ### usage:
