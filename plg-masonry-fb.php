@@ -19,7 +19,7 @@
 // c::set('plg_masonry.dir', 'asc');      // sortBy direction: asc, desc
 
 // version: 1.3.0 (21.08.2015)
-// changelog: 
+// changelog:
 // v1.0.1: add global parameters
 // v1.1.0: all logic now in this snippet
 // v1.2.0: option to limit source image size

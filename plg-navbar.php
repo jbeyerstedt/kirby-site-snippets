@@ -8,14 +8,14 @@
 // license: http://www.gnu.org/licenses/gpl-3.0.txt GPLv3 License
 
 // usage:
-// snippet('plg-navbar'); 
+// snippet('plg-navbar');
 // in the config.php:
 // c::set('navbar-class', 'navbar-default');
 // c::set('navbar-affix', true); //needs some boostrap script!
 // c::set('navbar-ignoreChildren', true); //disable dropdowns for children pages
 
 // version: 1.2.1 (14.05.2015)
-// changelog: 
+// changelog:
 // v1.1.0: add config option for the navbar style class
 // v1.2.0: move .container in nav.navbar for affix scripts
 // v1.2.1: make menu_title optional (remove button if text is empty)
@@ -46,7 +46,7 @@ if(!isset($ignoreChildren)) $ignoreChildren = false;
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav">        
+    <ul class="nav navbar-nav">
 <?php foreach($pages->visible() AS $p): ?>
 <?php $subs = ($p->hasVisibleChildren()) ? $p->children() : false ?>
 
@@ -64,7 +64,7 @@ if(!isset($ignoreChildren)) $ignoreChildren = false;
 <?php endforeach ?>
     </ul>
   </div><!-- /.navbar-collapse -->
-  
+
 </div>
 </nav>
 </div>

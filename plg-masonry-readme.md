@@ -1,11 +1,11 @@
 #kirby-site-snippets: plg-masonry-*
 
 ## ATTENTION: incompatible update from v1.2.0 to v1.3.0
-I´ve added some options to this plugin, which lead to the first any probably only incompatible update. With this update I´ve unified the option names and adapted them to the "namespacing" which kirby uses.  
-There are these changes:  
-`enable_masonry` to `plg_masonry.enable`  
-`masonry_width` to `plg_masonry.width`  
-`masonry_limit_size` to `plg_masonry.sizelimit`  
+I´ve added some options to this plugin, which lead to the first any probably only incompatible update. With this update I´ve unified the option names and adapted them to the "namespacing" which kirby uses.
+There are these changes:
+`enable_masonry` to `plg_masonry.enable`
+`masonry_width` to `plg_masonry.width`
+`masonry_limit_size` to `plg_masonry.sizelimit`
 `photo_lightbox` to `plg_masonry.lightbox`
 
 
@@ -42,18 +42,18 @@ c::set('plg_masonry.sizelimit', 1300);      // limit the source image size (long
 c::set('plg_masonry.sort', 'title');        // sortBy parameter: sort, title, etc.
 c::set('plg_masonry.dir', 'desc');          // sortBy direction: asc, desc
 ```
-`plg_masonry.enable`: enables the additional javascript, if you use my code examples. This is not relevant if your template containes all relevant scripts every time.  
+`plg_masonry.enable`: enables the additional javascript, if you use my code examples. This is not relevant if your template containes all relevant scripts every time.
 
-Additionally there are options for kirby´s `sortBy` method, which sorts the images.  
-`plg_masonry.sort`: sort images by this field  
-`plg_masonry.dir`: sort images in this direction  
+Additionally there are options for kirby´s `sortBy` method, which sorts the images.
+`plg_masonry.sort`: sort images by this field
+`plg_masonry.dir`: sort images in this direction
 
 
 #### in your html head
 ```php
 <head>
   [...]
-    
+
 <?php if (c::get('plg_masonry.enable')) : $width = c::get('plg_masonry.width'); ?>
   <style>
     #masonry {margin: 0 auto;}
@@ -102,7 +102,7 @@ Additionally there are options for kirby´s `sortBy` method, which sorts the ima
 <?php endif; ?>
 
 <?php if (c::get('plg_masonry.enable')) : ?>
-  <script type="text/javascript">  
+  <script type="text/javascript">
     $('#masonry').masonry({
       isFitWidth: true,
       columnWidth: <?php echo c::get('plg_masonry.width') ?>,

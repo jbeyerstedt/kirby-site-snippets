@@ -18,7 +18,7 @@
 //c::set('plg_carousel.dir', 'asc');   // sortBy direction: asc, desc
 
 // version: 1.2.0 (21.08.2015)
-// changelog: 
+// changelog:
 // v1.1.0: all logic now in this snippet
 // v1.1.1: bugfix: fix error if no preNormal and preAlt attributes were set
 // v1.2.0: new options for sorting of the images. WARNING: INCOMPATIBLE!
@@ -34,7 +34,7 @@ $sdir = c::get('plg_carousel.dir', 'desc');
 // if folder exists
 if (!(false==$carouselFolder) && ($carouselFolder->hasImages())) : echo $preNormal
 ?>
-  
+
   <div id="myCarousel" class="carousel slide">
 
     <!-- Indicators -->

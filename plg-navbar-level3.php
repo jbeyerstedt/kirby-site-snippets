@@ -8,12 +8,12 @@
 // license: http://www.gnu.org/licenses/gpl-3.0.txt GPLv3 License
 
 // usage:
-// snippet('plg-navbar-level3'); 
+// snippet('plg-navbar-level3');
 // in the config.php:
 // c::set('navbar-class', 'navbar-default navbar-fixed-top');
 
 // version: 1.1.0 (20.02.2015)
-// changelog: 
+// changelog:
 // v1.1.0: add config option for the navbar style class
 // -------------------------------------------
 
@@ -23,7 +23,7 @@ if(!isset($class)) $class = 'navbar-inverse navbar-fixed-top';
 
 // find the open/active page on the first level
 $root  = $pages->children()->findOpen();
-$items = ($root) ? $root->children()->visible() : false; 
+$items = ($root) ? $root->children()->visible() : false;
 ?>
 
 <nav class="navbar <?php echo $class ?>" role="navigation">
@@ -40,10 +40,10 @@ $items = ($root) ? $root->children()->visible() : false;
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
         <li <?php echo ($page->isChildOf($root)) ? '' : ' class="active"'?>><a href="<?php echo $root->url() ?>"> <i class="icon-home icon-large"></i> </a></li>
-        
+
 <?php foreach($items AS $item): ?>
         <li <?php echo ($item->isOpen()) ? ' class="active"' : '' ?>><a href="<?php echo $item->url() ?>"><?php echo html($item->title()) ?></a></li>
-<?php endforeach ?>        
+<?php endforeach ?>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>

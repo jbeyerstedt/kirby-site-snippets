@@ -19,7 +19,7 @@
 // c::set('plg_masonry.dir', 'asc');      // sortBy direction: asc, desc
 
 // version: 1.3.0 (21.08.2015)
-// changelog: 
+// changelog:
 // v1.0.1: add global parameters
 // v1.1.0: all logic now in this snippet
 // v1.2.0: option to limit source image size
@@ -46,7 +46,7 @@ if(isset($max_size)) :
 ?>
     <a class="swipebox" rel="gallery" href="<?php echo $big_img->url() ?>">
 <?php else: ?>
-    <a class="swipebox" rel="gallery" href="<?php echo $pic->url() ?>"> 
+    <a class="swipebox" rel="gallery" href="<?php echo $pic->url() ?>">
 <?php endif; ?>
       <?php echo ThumbExt($pic, array('width' => $width, 'class' => 'img-rounded', 'srcset' => '2x, 3x')) ?></a>
   </div>
