@@ -17,6 +17,7 @@ There are two version of the masonry snippet. One for fancybox and another for s
 - masonry: <http://masonry.desandro.com>
 - swipebox: <http://brutaldesign.github.io/swipebox/>
 - fancybox: <http://fancybox.net/>
+- kirby-plugin thumbExt: <https://github.com/jbeyerstedt/kirby-plugin-thumbExt>
 
 The following code examples assume, these locations:
 
@@ -37,7 +38,9 @@ All these examples are made to switch between swipebox and fancybox. If you only
 ```php
 c::set('plg_masonry.enable', true);         // enable additional scripts
 c::set('plg_masonry.lightbox', 'swipebox'); // swipebox, fancybox
-c::set('plg_masonry.width', 170);           // set a width for masonry images
+c::set('plg_masonry.width', 155);           // set a width for masonry images
+c::set('plg_masonry.quality', 75);
+c::set('plg_masonry.class');                // html class to be set
 c::set('plg_masonry.sizelimit', 1300);      // limit the source image size (long edge)
 c::set('plg_masonry.sort', 'title');        // sortBy parameter: sort, title, etc.
 c::set('plg_masonry.dir', 'desc');          // sortBy direction: asc, desc
