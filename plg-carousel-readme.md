@@ -1,7 +1,7 @@
 #kirby-site-snippets: plg-carousel
 
 ## ATTENTION: incompatible update from v1.1.1 to v1.2.0
-I´ve added some options to this plugin, which lead to the first any probably only incompatible update. With this update I´ve unified the option names and adapted them to the "namespacing" which kirby uses.
+I’ve added some options to this plugin, which lead to the first (and probably only) incompatible update. With this update I’ve unified the option names and adapted them to the "namespacing" which kirby uses.
 There are these changes:
 `enable_carousel` to `plg_carousel.enable`
 
@@ -25,7 +25,7 @@ The snippet code itself must be placed in the `site/snippets` folder. Of course 
 //c::set('plg_carousel.interval', 2000); // image changing interval in milliseconds
 ```
 `plg_carousel.enable`: enables the additional javascript, if you use my code examples. This is not relevant if your template containes all relevant scripts every time.
-Additionally there are options for kirby´s `sortBy` method, which sorts the images.
+Additionally there are options for kirby’s `sortBy` method, which sorts the images.
 `plg_carousel.sort`: sort images by this field
 `plg_carousel.dir`: sort images in this direction
 

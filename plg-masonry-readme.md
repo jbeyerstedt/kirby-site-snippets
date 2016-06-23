@@ -1,7 +1,7 @@
 #kirby-site-snippets: plg-masonry-*
 
 ## ATTENTION: incompatible update from v1.2.0 to v1.3.0
-I´ve added some options to this plugin, which lead to the first any probably only incompatible update. With this update I´ve unified the option names and adapted them to the "namespacing" which kirby uses.
+I’ve added some options to this plugin, which lead to the first (and probably only) incompatible update. With this update I’ve unified the option names and adapted them to the "namespacing" which kirby uses.
 There are these changes:
 `enable_masonry` to `plg_masonry.enable`
 `masonry_width` to `plg_masonry.width`
@@ -47,7 +47,7 @@ c::set('plg_masonry.dir', 'desc');          // sortBy direction: asc, desc
 ```
 `plg_masonry.enable`: enables the additional javascript, if you use my code examples. This is not relevant if your template containes all relevant scripts every time.
 
-Additionally there are options for kirby´s `sortBy` method, which sorts the images.
+Additionally there are options for kirby’s `sortBy` method, which sorts the images.
 `plg_masonry.sort`: sort images by this field
 `plg_masonry.dir`: sort images in this direction
 
@@ -115,7 +115,7 @@ Additionally there are options for kirby´s `sortBy` method, which sorts the ima
   </script>
 <?php endif; ?>
 ```
-If you don´t want to switch between fancybox and swipebox, you can of course delete not needed code.
+If you don’t want to switch between fancybox and swipebox, you can of course delete not needed code.
 
 
 ### usage:
