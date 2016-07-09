@@ -1,19 +1,19 @@
-#kirby-site-snippets: plg-masonry-*
+# kirby-site-snippets: plg-masonry-*
+**license:** GNU GPL v3
 
 ## ATTENTION: incompatible update from v1.2.0 to v1.3.0
-I’ve added some options to this plugin, which lead to the first (and probably only) incompatible update. With this update I’ve unified the option names and adapted them to the "namespacing" which kirby uses.
-There are these changes:
-`enable_masonry` to `plg_masonry.enable`
-`masonry_width` to `plg_masonry.width`
-`masonry_limit_size` to `plg_masonry.sizelimit`
-`photo_lightbox` to `plg_masonry.lightbox`
+I’ve added some options to this plugin, which lead to the first (and probably only) incompatible update. With this update I’ve unified the option names and adapted them to the "namespacing" which kirby uses.  
+There are these changes:  
+`enable_masonry` to `plg_masonry.enable`  
+`masonry_width` to `plg_masonry.width`  
+`masonry_limit_size` to `plg_masonry.sizelimit`  
+`photo_lightbox` to `plg_masonry.lightbox`  
 
 
-## how to use
+## User Manual
 There are two version of the masonry snippet. One for fancybox and another for swipebox.
 
-
-### prerequisites:
+### Prerequisites:
 - masonry: <http://masonry.desandro.com>
 - swipebox: <http://brutaldesign.github.io/swipebox/>
 - fancybox: <http://fancybox.net/>
@@ -30,11 +30,11 @@ Additionally you need to include jquery.
 The snippet code itself must be placed in the `site/snippets` folder. Of course you can add them in a subdirectory if this folder. (Especially useful if you use git submodules.)
 
 
-### additional code to put in your snippets/ templates:
+### Additional code to put in your snippets/ templates:
 All these examples are made to switch between swipebox and fancybox. If you only have one, you can ret rid of all the if-cases.
 
 
-#### in your config
+##### in your config
 ```php
 c::set('plg_masonry.enable', true);         // enable additional scripts
 c::set('plg_masonry.lightbox', 'swipebox'); // swipebox, fancybox
@@ -47,12 +47,12 @@ c::set('plg_masonry.dir', 'desc');          // sortBy direction: asc, desc
 ```
 `plg_masonry.enable`: enables the additional javascript, if you use my code examples. This is not relevant if your template containes all relevant scripts every time.
 
-Additionally there are options for kirby’s `sortBy` method, which sorts the images.
-`plg_masonry.sort`: sort images by this field
-`plg_masonry.dir`: sort images in this direction
+Additionally there are options for kirby’s `sortBy` method, which sorts the images.  
+`plg_masonry.sort`: sort images by this field  
+`plg_masonry.dir`: sort images in this direction  
 
 
-#### in your html head
+##### in your html head
 ```php
 <head>
   [...]
@@ -118,8 +118,8 @@ Additionally there are options for kirby’s `sortBy` method, which sorts the im
 If you don’t want to switch between fancybox and swipebox, you can of course delete not needed code.
 
 
-### usage:
-If eveythig is set up, including the snippet in your template is quite ease. Simple put
+### Usage:
+If eveythig is set up, including the snippet in your template is quite ease. Simply put
 ```php
 snippet('plg-masonry-sb', array('currentPage'=>$page)); // for swipebox
 // OR
@@ -130,6 +130,5 @@ surrounded by php tags.
 Then the snippet displays all your images contained in the pages directory.
 
 
-
-## contribution
-Feel free to fork this repository an make it better.
+## Contribution
+Feel free to fork this repository and make it better.
