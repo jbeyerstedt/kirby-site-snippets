@@ -48,10 +48,12 @@ if (!(false==$carouselFolder) && ($carouselFolder->hasImages())) : echo $preNorm
 <?php $n=0; foreach($carouselFolder->images()->sortBy($sort, $sdir) as $image): $n++; ?>
       <div class="item<?php if($n==1) echo ' active' ?>">
         <img src="<?php echo $image->url() ?>" alt="<?php echo $image->title()->html() ?>" />
+        <?php if(($image->heading() != "") || ($image->caption() != "")) : ?>
         <div class="carousel-caption">
-          <h3><?php echo $image->heading()->kirbytext() ?></h3>
+          <?php if($image->heading() != "") : ?><h3><?php echo $image->heading()->kirbytext() ?></h3><?php endif; ?>
           <?php echo $image->caption()->kirbytext() ?>
         </div>
+        <?php endif; ?>
       </div>
 <?php endforeach ?>
     </div>
