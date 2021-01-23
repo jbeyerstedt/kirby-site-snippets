@@ -19,29 +19,22 @@ The snippet code itself must be placed in the `site/snippets` folder. Of course 
 
 ##### in your config
 ```php
-//c::set('plg_carousel.enable', true);
-//c::set('plg_carousel.sort', 'title');
-//c::set('plg_carousel.dir', 'desc');
 //c::set('plg_carousel.interval', 2000); // image changing interval in milliseconds
 ```
 `plg_carousel.enable`: enables the additional javascript, if you use my code examples. This is not relevant if your template containes all relevant scripts every time.  
 Additionally there are options for kirby’s `sortBy` method, which sorts the images.  
-`plg_carousel.sort`: sort images by this field  
-`plg_carousel.dir`: sort images in this direction  
 
 
 ##### before you closing body tag
 ```php
-<?php if (c::get('plg_carousel.enable')) : ?>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('.carousel').carousel({
-        interval: <?php echo c::get('plg_carousel.interval', 2000); ?>
-      });
-      $('.carousel').carousel('cycle');
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.carousel').carousel({
+      interval: <?php echo c::get('plg_carousel.interval', 2000); ?>
     });
-  </script>
-<?php endif; ?>
+    $('.carousel').carousel('cycle');
+  });
+</script>
 ```
 Additionally you need to include jquery.
 

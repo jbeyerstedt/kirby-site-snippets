@@ -45,14 +45,22 @@ $images = $currentPage->images()->sortBy($sort, $sdir);
   <div class="masonryitem">
 <?php
 if(isset($max_size)) :
-  ($pic->width() > $pic->height()) ? $big_img = Thumb($pic, array('width' => $max_size))
-                                   : $big_img = Thumb($pic, array('height' => $max_size));
+  ($pic->width() > $pic->height()) ? $big_img = $pic->thumb(['width' => $max_size])
+                                   : $big_img = $pic->thumb(['height' => $max_size]);
 ?>
     <a class="fancybox" rel="gallery" data-fancyboc-group="gallery" href="<?php echo $big_img->url() ?>">
 <?php else: ?>
     <a class="fancybox" rel="gallery" data-fancyboc-group="gallery" href="<?php echo $pic->url() ?>">
 <?php endif; ?>
-      <?php echo ThumbExt($pic, ['width'=>$width,'quality'=>$quali,'class'=>$class,'srcset'=>'2x, 3x']) ?></a>
+      <?php
+      $imgurl = $pic->url();
+      $srcset = $pic->srcset([
+        '1x' => ['width'=>$width, 'quality'=>$quali],
+        '2x' => ['width'=>$width*2, 'quality'=>$quali],
+        '3x' => ['width'=>$width*3, 'quality'=>$quali],
+      ]);
+      echo '<img src="'.$imgurl.'" class="'.$class.'" alt="Portrait" srcset="'.$srcset.'" />';
+      ?></a>
   </div>
 <?php endforeach ?>
 </div>

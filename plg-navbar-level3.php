@@ -23,7 +23,7 @@ if(!isset($class)) $class = 'navbar-inverse navbar-fixed-top';
 
 // find the open/active page on the first level
 $root  = $pages->children()->findOpen();
-$items = ($root) ? $root->children()->visible() : false;
+$items = ($root) ? $root->children()->listed() : false;
 ?>
 
 <nav class="navbar <?php echo $class ?>" role="navigation">

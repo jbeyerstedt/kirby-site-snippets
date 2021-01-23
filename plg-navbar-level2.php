@@ -32,7 +32,7 @@ $root  = $pages->findOpen();
 if ($invisible==true) {
   $items = ($root) ? $root->children() : false;
 }else {
-  $items = ($root) ? $root->children()->visible() : false;
+  $items = ($root) ? $root->children()->listed() : false;
 }
 ?>
 

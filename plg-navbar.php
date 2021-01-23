@@ -47,13 +47,13 @@ if(!isset($ignoreChildren)) $ignoreChildren = false;
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-<?php foreach($pages->visible() AS $p): ?>
-<?php $subs = ($p->hasVisibleChildren()) ? $p->children() : false ?>
+<?php foreach($pages->listed() AS $p): ?>
+<?php $subs = ($p->hasListedChildren()) ? $p->children() : false ?>
 
 <?php if ($subs && $subs->count() && !$ignoreChildren): ?>
       <li class="dropdown <?php echo ($p->isOpen()) ? 'active' : '' ?>"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo html($p->title()) ?> <span class="caret"></span></a>
         <ul class="dropdown-menu" role="menu">
-<?php foreach($subs->visible() AS $s): ?>
+<?php foreach($subs->listed() AS $s): ?>
           <li><a href="<?php echo $s->url() ?>"> <?php echo $s->title()?> </a></li>
 <?php endforeach ?>
         </ul>

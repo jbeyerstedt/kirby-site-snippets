@@ -17,7 +17,6 @@ There are two version of the masonry snippet. One for fancybox and another for s
 - masonry: <http://masonry.desandro.com>
 - swipebox: <http://brutaldesign.github.io/swipebox/>
 - fancybox: <http://fancybox.net/>
-- kirby-plugin thumbExt: <https://github.com/jbeyerstedt/kirby-plugin-thumbExt>
 
 The following code examples assume, these locations:
 
