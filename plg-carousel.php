@@ -18,14 +18,14 @@
 $carouselFiles = $currentPage->carousel()->toFiles();
 if (!isset($preNormal)) {$preNormal="";}
 if (!isset($preAlt)) {$preAlt="";}
-$sort = c::get('plg_carousel.sort', 'title');
-$sdir = c::get('plg_carousel.dir', 'desc');
 
-// if folder exists
-if ($carouselFiles) : echo $preNormal
+$carousel_class = c::get('plg_carousel.class', '');
+
+// if the file selection is not empty
+if (!$carouselFiles->isEmpty()) : echo $preNormal
 ?>
 
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div id="myCarousel" class="carousel slide <?php echo $carousel_class ?>" data-ride="carousel">
 
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -37,7 +37,7 @@ if ($carouselFiles) : echo $preNormal
     <div class="carousel-inner" role="listbox">
 <?php $n=-1; foreach($carouselFiles as $image): $n++; ?>
       <div class="carousel-item<?php if($n==0) echo ' active' ?>">
-        <img src="<?php echo $image->url() ?>" alt="<?php echo $image->title()->html() ?>" />
+        <img src="<?php echo $image->url() ?>" class="d-block w-100" alt="<?php echo $image->title()->html() ?>" />
         <?php if(($image->heading() != "") || ($image->caption() != "")) : ?>
         <div class="carousel-caption">
           <?php if($image->heading() != "") : ?><h3><?php echo $image->heading()->kirbytext() ?></h3><?php endif; ?>
