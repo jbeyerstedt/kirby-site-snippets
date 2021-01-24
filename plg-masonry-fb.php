@@ -59,7 +59,8 @@ if(isset($max_size)) :
         '2x' => ['width'=>$width*2, 'quality'=>$quali],
         '3x' => ['width'=>$width*3, 'quality'=>$quali],
       ]);
-      echo '<img src="'.$imgurl.'" class="'.$class.'" alt="Portrait" srcset="'.$srcset.'" />';
+      $alt = ((!$pic->alt()->isEmpty()) ? 'alt="'.$pic->alt()->html().'"' : "");
+      echo '<img src="'.$imgurl.'" class="'.$class.'" '.$alt.' srcset="'.$srcset.'" />';
       ?></a>
   </div>
 <?php endforeach ?>
